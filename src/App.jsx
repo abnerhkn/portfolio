@@ -222,7 +222,7 @@ const App = () => {
       <header className="max-w-5xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center text-center">
         <div className="relative mb-10">
           <div className={`absolute inset-0 blur-3xl rounded-full opacity-20 ${styles.accent.replace('text-', 'bg-')}`}></div>
-          <img src="/profile.jpg" alt="Abner" className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/10 grayscale" />
+          <img src="https://github.com/abnerhkn/portfolio/blob/main/public/profile.jpg?raw=true" alt="Abner" className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/10 grayscale" />
         </div>
         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold mb-6 border ${isDark ? 'bg-blue-500/10 border-blue-500/30 text-blue-400' : 'bg-blue-50 border-blue-200 text-blue-600'}`}>
           <MapPin size={12} /> {t.badge}
