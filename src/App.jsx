@@ -25,7 +25,7 @@ import {
 
 
 const App = () => {
-  const [lang, setLang] = useState('pt');
+  const [lang, setLang] = useState('en');
   const [isDark, setIsDark] = useState(true);
 
   const content = {
