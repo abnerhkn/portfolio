@@ -32,7 +32,7 @@ const App = () => {
     pt: {
       nav: ['Sobre', 'Experiência', 'Stack', 'Projetos', 'Contato'],
       badge: 'MUDANDO PARA DUBLIN, IRLANDA',
-      title: 'Abner ASDAS',
+      title: 'Abner Hakinnen',
       subtitle: 'Analytics Engineer',
       heroDesc: 'Transformando dados brutos em decisões estratégicas através de pipelines modernos e arquiteturas escaláveis.',
       aboutTitle: 'Sobre',
