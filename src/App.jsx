@@ -206,7 +206,7 @@ const App = () => {
               ))}
             </div>
             <div className="flex items-center gap-2 pl-4 border-l border-gray-500/20">
-              <button onClick={() => setLang(lang === 'pt' ? 'en' : 'pt')} className="p-2 hover:opacity-70 transition-opacity flex items-center gap-1">
+              <button onClick={() => setLang(lang === 'en' ? 'pt' : 'en')} className="p-2 hover:opacity-70 transition-opacity flex items-center gap-1">
                 <Languages size={18} />
                 <span className="text-[10px] font-bold">{lang.toUpperCase()}</span>
               </button>
