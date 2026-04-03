@@ -22,8 +22,6 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-
-
 const App = () => {
   const [lang, setLang] = useState('en');
   const [isDark, setIsDark] = useState(true);
@@ -74,6 +72,8 @@ const App = () => {
       footer: 'Built with a focus on performance • 2026'
     }
   };
+
+  const t = content[lang];
 
   const experience = [
     {
@@ -140,10 +140,7 @@ const App = () => {
   };
 
   return (
-
     <div className={`min-h-screen transition-all duration-500 font-sans selection:bg-blue-500/30 ${styles.bg} ${styles.text}`}>
-
-      {/* Navigation */}
       <nav className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-colors duration-500 ${isDark ? 'bg-black/70 border-[#38383A]' : 'bg-white/70 border-[#D2D2D7]'}`}>
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-bold text-lg tracking-tight">AH<span className={styles.accent}>.</span></span>
@@ -166,7 +163,6 @@ const App = () => {
         </div>
       </nav>
 
-      {/* Hero */}
       <header className="max-w-5xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center text-center">
         <div className="relative mb-10">
           <div className={`absolute inset-0 blur-3xl rounded-full opacity-20 ${styles.accent.replace('text-', 'bg-')}`}></div>
@@ -183,13 +179,12 @@ const App = () => {
             {t.ctaButton}
           </a>
           <div className="flex items-center gap-4 px-4">
-            <a href="https://linkedin.com/in/abnerhakinnen" target="_blank" className={`hover:${styles.accent} transition-colors ${styles.textSec}`}><Linkedin size={24} /></a>
-            <a href="https://github.com/abnerhkn" target="_blank" className={`hover:${styles.accent} transition-colors ${styles.textSec}`}><Github size={24} /></a>
+            <a href="https://linkedin.com/in/abnerhakinnen" target="_blank" rel="noreferrer" className={`hover:${styles.accent} transition-colors ${styles.textSec}`}><Linkedin size={24} /></a>
+            <a href="https://github.com/abnerhkn" target="_blank" rel="noreferrer" className={`hover:${styles.accent} transition-colors ${styles.textSec}`}><Github size={24} /></a>
           </div>
         </div>
       </header>
 
-      {/* About Section - Updated with provided text */}
       <section id="sobre" className={`py-24 border-y ${isDark ? 'bg-[#0A0A0A] border-[#1C1C1E]' : 'bg-[#FBFBFD] border-[#D2D2D7]'}`}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-16">
           <div className="md:col-span-1">
@@ -204,9 +199,9 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 space-y-1">
+          <div className="md:col-span-2 space-y-4">
             {t.aboutText.map((paragraph, idx) => (
-              <p key={idx} className="text-lg leading-relaxed font-small opacity-90">
+              <p key={idx} className="text-lg leading-relaxed opacity-90">
                 {paragraph}
               </p>
             ))}
@@ -214,7 +209,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Experience */}
       <section id="experiência" className="py-24 max-w-5xl mx-auto px-6">
         <h3 className={`text-xs font-bold uppercase tracking-[0.2em] mb-12 text-center ${styles.textSec}`}>{t.expTitle}</h3>
         <div className="space-y-6">
@@ -245,7 +239,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Projects */}
       <section id="projetos" className={`py-24 ${isDark ? 'bg-[#0A0A0A]' : 'bg-[#FBFBFD]'}`}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
@@ -256,7 +249,7 @@ const App = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {projects.map((p, i) => (
-              <a href={p.link} key={i} target="_blank" className={`group p-8 rounded-[2rem] border flex flex-col transition-all hover:-translate-y-2 ${styles.card}`}>
+              <a href={p.link} key={i} target="_blank" rel="noreferrer" className={`group p-8 rounded-[2rem] border flex flex-col transition-all hover:-translate-y-2 ${styles.card}`}>
                 <div className="flex justify-between mb-8">
                   <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-500 group-hover:scale-110 transition-transform"><Database /></div>
                   <ArrowUpRight className="opacity-20 group-hover:opacity-100 transition-opacity" />
@@ -273,12 +266,11 @@ const App = () => {
         </div>
       </section>
 
-      {/* Stack Grid */}
       <section id="stack" className="py-24 max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { title: 'Engenharia', items: ['Python', 'SQL', 'dbt', 'Airflow', 'Snowflake'], icon: <Workflow /> },
-            { title: 'Infra', items: ['AWS', 'Databricks', 'Docker', 'Kestra'], icon: <Cpu /> },
+            { title: 'Engineering', items: ['Python', 'SQL', 'dbt', 'Airflow', 'Snowflake'], icon: <Workflow /> },
+            { title: 'Infrastructure', items: ['AWS', 'Databricks', 'Docker', 'Kestra'], icon: <Cpu /> },
             { title: 'Analytics', items: ['Power BI', 'QuickSight', 'Looker Studio'], icon: <BarChart3 /> },
             { title: 'Data Science', items: ['Pandas', 'ML (K-means)', 'Clustering'], icon: <Layers /> },
           ].map((cat, i) => (
@@ -299,7 +291,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer / Contact */}
       <footer id="contato" className="py-32 px-6 text-center border-t border-inherit">
         <h3 className="text-3xl md:text-5xl font-bold mb-8">{t.ctaTitle}</h3>
         <p className={`mb-12 text-lg ${styles.textSec}`}>{t.ctaDesc}</p>
