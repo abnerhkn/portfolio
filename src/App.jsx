@@ -31,156 +31,104 @@ const App = () => {
   const content = {
     pt: {
       nav: ['Sobre', 'Experiência', 'Stack', 'Projetos', 'Contato'],
-      badge: 'MUDANDO PARA DUBLIN, IRLANDA',
+      badge: 'MUDANDO PARA DUBLIN, IRLANDA • OUT 2026',
       title: 'Abner Hakinnen',
-      subtitle: 'Analytics Engineer',
-      heroDesc: 'Transformando dados brutos em decisões estratégicas através de pipelines modernos e arquiteturas escaláveis.',
+      subtitle: 'Data Engineer | Software Engineering Background',
+      heroDesc: 'Construindo pipelines de dados resilientes e arquiteturas modernas (ELT/ETL) aplicando princípios de engenharia de software para garantir escalabilidade e confiança.',
       aboutTitle: 'Sobre',
       aboutText: [
-        "Analytics Engineer com experiência em ETL/ELT, modelagem de dados e soluções de BI orientadas a negócio.",
-        "Especialista em transformar dados brutos em datasets confiáveis usando Python, SQL, AWS e dbt.",
-        "Foco em escalabilidade, qualidade de dados e impacto mensurável nas decisões estratégicas."
+        "Engenheiro de Software de formação, migrei para a Engenharia de Dados para resolver o gap entre sistemas complexos e insights acionáveis.",
+        "Especialista em construir bases de dados robustas utilizando Snowflake, dbt, Python e nuvem AWS, com foco total em Data Quality e automação.",
+        "Experiência em liderar a transição de processos manuais para pipelines orquestrados e testados, garantindo uma 'Single Source of Truth' confiável."
       ],
       expTitle: 'Trajetória Profissional',
       eduTitle: 'Formação',
       stackTitle: 'Especialidades Técnicas',
-      projectsTitle: 'Projetos em Destaque',
-      impactLabel: 'Impacto de Negócio',
-      ctaTitle: 'Pronto para novos desafios em Dublin.',
-      ctaDesc: 'Buscando oportunidades onde dados limpos e bases fortes geram impacto real.',
-      ctaButton: 'Falar com Abner',
-      resumeButton: 'Ver CV Completo',
-      footer: 'Construído com precisão • 2024'
+      projectsTitle: 'Engenharia em Ação',
+      impactLabel: 'Impacto Técnico & Negócio',
+      ctaTitle: 'Pronto para impulsionar times de dados em Dublin.',
+      ctaDesc: 'Buscando oportunidades em Engenharia de Dados onde código limpo e infraestrutura sólida são prioridade.',
+      ctaButton: 'Entrar em contato',
+      footer: 'Desenvolvido com foco em performance • 2026'
     },
     en: {
       nav: ['About', 'Experience', 'Stack', 'Projects', 'Contact'],
-      badge: 'RELOCATING TO DUBLIN, IRELAND',
+      badge: 'RELOCATING TO DUBLIN, IRELAND • OCT 2026',
       title: 'Abner Hakinnen',
-      subtitle: 'Analytics Engineer',
-      heroDesc: 'Turning raw data into strategic decisions through modern pipelines and scalable architectures.',
+      subtitle: 'Data Engineer | Software Engineering Background',
+      heroDesc: 'Building resilient data pipelines and modern architectures (ELT/ETL) by applying software engineering principles to ensure scalability and trust.',
       aboutTitle: 'About',
       aboutText: [
-        "Analytics Engineer experienced in ETL/ELT pipelines, data modeling, and business-driven BI solutions.",
-        "Specialized in transforming raw data into reliable datasets using Python, SQL, AWS, and dbt.",
-        "Focused on scalability, data quality, and measurable business impact."
+        "Software Engineer by trade, I pivoted to Data Engineering to bridge the gap between complex systems and actionable insights.",
+        "Specialized in building robust data foundations using Snowflake, dbt, Python, and AWS, with a core focus on Data Quality and automation.",
+        "Experienced in leading the transition from manual processes to orchestrated, tested pipelines, ensuring a reliable Single Source of Truth."
       ],
       expTitle: 'Professional Experience',
       eduTitle: 'Education',
       stackTitle: 'Technical Specialties',
-      projectsTitle: 'Featured Projects',
-      impactLabel: 'Business Impact',
-      ctaTitle: 'Ready for new challenges in Dublin.',
-      ctaDesc: 'Seeking opportunities where clean data and strong foundations drive real growth.',
+      projectsTitle: 'Engineering in Action',
+      impactLabel: 'Technical & Business Impact',
+      ctaTitle: 'Ready to drive data teams in Dublin.',
+      ctaDesc: 'Seeking Data Engineering opportunities where clean code and solid infrastructure are a priority.',
       ctaButton: 'Get in Touch',
-      resumeButton: 'View Full CV',
-      footer: 'Built with precision • 2024'
+      footer: 'Built with a focus on performance • 2026'
     }
   };
-
-  const t = content[lang];
 
   const experience = [
     {
       company: "Víssimo Group",
-      role: lang === 'pt' ? "Engenheiro Analítico Pleno" : "Mid-level Analyst Engineer",
+      role: lang === 'pt' ? "Engenheiro de Dados Pleno" : "Data Engineer",
       period: "2025 - Present",
       description: lang === 'pt'
-        ? "Liderança técnica em pipelines ETL/ELT e orquestração com Kestra. Foco em clusterização de clientes e dashboards executivos no QuickSight."
-        : "Technical leadership in ETL/ELT pipelines and Kestra orchestration. Focused on customer clustering and executive dashboards on QuickSight.",
-      tags: ["Python", "Kestra", "AWS", "QuickSight", "SQL"]
+        ? "Liderança técnica na arquitetura de pipelines ELT. Implementação de orquestração moderna com Kestra e modelagem de dados para suporte a decisões executivas via AWS QuickSight."
+        : "Technical leadership in ELT pipeline architecture. Implementation of modern orchestration using Kestra and data modeling to support executive decision-making via AWS QuickSight.",
+      tags: ["Python", "Kestra", "AWS", "Snowflake", "SQL"]
     },
     {
       company: "Linx",
-      role: lang === 'pt' ? "Engenheiro Analítico de Integração de Dados Pleno" : "Mid-level Data Integration Analyst Engineer",
+      role: lang === 'pt' ? "Engenheiro de Dados (Integração)" : "Data Integration Engineer",
       period: "2024 - 2025",
       description: lang === 'pt'
-        ? "Redução de 40% no tempo de resposta através da automação de BI e DataOps em ambientes AWS e Databricks."
-        : "40% reduction in response time through BI automation and DataOps in AWS and Databricks environments.",
-      tags: ["Databricks", "SSIS", "AWS Lambda", "Power BI"]
+        ? "Otimização de fluxos de dados em ambiente Databricks e AWS. Automação de processos de BI que resultaram em 40% de ganho de performance operacional."
+        : "Optimization of data flows in Databricks and AWS environments. Automation of BI processes resulting in a 40% operational performance gain.",
+      tags: ["Databricks", "PySpark", "AWS Lambda", "SQL"]
     },
     {
       company: "AL Factory",
-      role:
-        lang === "pt"
-          ? "Engenheiro de Software (Foco em Dados & Backend)"
-          : "Software Engineer (Data & Backend Focus)",
-      period: "Mar 2022 - Mar 2023",
-      description:
-        lang === "pt"
-          ? "Desenvolvimento de APIs e serviços backend em Python com PostgreSQL e SQLite, estruturando bases de dados que viabilizaram analytics e visibilidade operacional. Construção do sistema Sucre do zero, contribuindo para aumento de 25% na retenção de usuários. Atuação em ciclos ágeis, traduzindo requisitos de negócio em soluções técnicas escaláveis e sustentáveis."
-          : "Developed backend services and APIs in Python using PostgreSQL and SQLite, structuring data foundations that enabled analytics and operational visibility. Built the Sucre application from scratch, contributing to a 25% increase in user retention. Worked in agile cycles, translating business requirements into scalable and maintainable technical solutions.",
-      tags: ["Python", "PostgreSQL", "APIs", "Docker", "Agile"]
-    },
-
+      role: "Software Engineer",
+      period: "2022 - 2023",
+      description: lang === 'pt'
+        ? "Desenvolvimento backend focado em performance de banco de dados (PostgreSQL). Estruturação de APIs que serviram de base para análise de retenção de usuários (aumento de 25%)."
+        : "Backend development focused on database performance (PostgreSQL). Structured APIs that served as the foundation for user retention analytics (25% increase).",
+      tags: ["Python", "PostgreSQL", "Docker", "API Design"]
+    }
   ];
 
   const projects = [
     {
-      title: "SaaS Revenue Analytics Engineering",
-      desc:
-        lang === "pt"
-          ? "Projeto de Analytics Engineering com modelagem de receita (MRR/NRR/Churn) em dbt + Snowflake, com documentação e testes."
-          : "Analytics Engineering project with revenue modeling (MRR/NRR/Churn) in dbt + Snowflake, including docs and tests.",
-      impact:
-        lang === "pt"
-          ? "Métricas padronizadas de receita e churn para reporting consistente"
-          : "Standardized revenue & churn metrics for consistent reporting",
-      link: "https://github.com/abnerhkn/saas-revenue-analytics-engineering?tab=readme-ov-file#business-context",
-      tags: ["dbt", "Snowflake", "SQL"]
+      title: "Modern Data Stack: SaaS Revenue",
+      desc: lang === "pt"
+        ? "Arquitetura completa de Analytics Engineering (MRR/Churn) usando dbt + Snowflake. Foco em testes automatizados e linhagem de dados."
+        : "End-to-end Analytics Engineering architecture (MRR/Churn) using dbt + Snowflake. Focused on automated testing and data lineage.",
+      impact: lang === "pt" ? "Single Source of Truth para métricas financeiras" : "Single Source of Truth for financial metrics",
+      link: "https://github.com/abnerhkn/saas-revenue-analytics-engineering",
+      tags: ["dbt", "Snowflake", "Data Modeling"]
     },
     {
-      title: "Customer Clustering (K-Means)",
-      desc: lang === 'pt' ? "Modelo para classificação de comportamento de compra de vinhos." : "Model for classifying wine purchasing behavior.",
-      impact: lang === 'pt' ? "Otimização de campanhas de marketing" : "Marketing campaign optimization",
-      link: "https://github.com/abnerhkn",
-      tags: ["Python", "ML", "SQL"]
-    },
-    {
-      title: "ANP Fuel ETL",
-      desc: lang === 'pt' ? "Automação de dados públicos de combustíveis brasileiros." : "Automation of Brazilian public fuel data.",
-      impact: lang === 'pt' ? "+100k registros diários" : "+100k daily records",
+      title: "ANP Fuel ETL Pipeline",
+      desc: lang === 'pt' ? "Pipeline resiliente para processamento de dados públicos em larga escala utilizando Docker e Python." : "Resilient pipeline for large-scale public data processing using Docker and Python.",
+      impact: lang === 'pt' ? "Processamento de +100k registros/dia" : "+100k records processed daily",
       link: "https://github.com/abnerhkn/anp-fuel-etl",
-      tags: ["Docker", "Pandas", "ETL"]
+      tags: ["Python", "Docker", "ETL"]
     },
     {
-      title: "Currency Exchange ETL Pipeline",
-      desc:
-        lang === "pt"
-          ? "Pipeline ETL para ingestão e processamento de cotações de moedas com carga automatizada no BigQuery."
-          : "ETL pipeline for ingesting and processing currency exchange rates with automated BigQuery loading.",
-      impact:
-        lang === "pt"
-          ? "Automação de dados financeiros com atualização programada e modelagem analítica"
-          : "Automated financial data ingestion with scheduled updates and analytical modeling",
+      title: "Financial Data Ingestion (BigQuery)",
+      desc: lang === 'pt' ? "Pipeline automatizado de ingestão de câmbio com carga programada e monitoramento de integridade." : "Automated currency exchange ingestion pipeline with scheduled loading and data integrity monitoring.",
+      impact: lang === 'pt' ? "Disponibilidade de dados financeiros em tempo real" : "Real-time financial data availability",
       link: "https://github.com/abnerhkn/cotacao-moedas-etl-bigquery",
-      tags: ["Python", "BigQuery", "ETL"]
-    },
-    {
-      title: "BigTech Language Project",
-      desc:
-        lang === "pt"
-          ? "Projeto focado em processamento e análise de linguagem para contextos de tecnologia, com estrutura orientada a dados."
-          : "Language processing and analysis project applied to technology contexts, built with a data-oriented architecture.",
-      impact:
-        lang === "pt"
-          ? "Exploração prática de NLP e modelagem aplicada"
-          : "Hands-on NLP exploration and applied modeling",
-      link: "https://github.com/abnerhkn/bigtech-language",
-      tags: ["Python", "NLP", "Data Modeling"]
-    }, {
-      title: "Pagar.me Status Data Pipeline",
-      desc:
-        lang === "pt"
-          ? "Pipeline para ingestão e processamento de status de transações via API Pagar.me, estruturando dados para análise operacional."
-          : "Data pipeline ingesting transaction status data from the Pagar.me API and structuring it for operational analytics.",
-      impact:
-        lang === "pt"
-          ? "Automação de monitoramento de pagamentos e melhoria de visibilidade operacional"
-          : "Automated payment monitoring and improved operational visibility",
-      link: "https://github.com/abnerhkn/pagarme-status-pipeline",
-      tags: ["API", "Python", "ETL"]
-    },
-
+      tags: ["BigQuery", "Cloud Functions", "Python"]
+    }
   ];
 
   const styles = {
